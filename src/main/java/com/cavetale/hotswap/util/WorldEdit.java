@@ -61,7 +61,7 @@ public final class WorldEdit {
         com.sk89q.worldedit.WorldEdit.getInstance()
             .getSessionManager()
             .get(BukkitAdapter.adapt(player))
-            .remember(session);
+            .remember(editSession);
         editSession.close();
         editSession = null;
     }
