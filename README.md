@@ -18,6 +18,12 @@ can specify whether to look at the beginning (`^` prefix) or the end
 - `/hotswap ^<from> <to>` Replace beginning of material name
 - `/hotswap <from>$ <to>` Replace end of material name
 
+## Dependencies
+
+WorldEdit is required to select the region where the command should
+operate. Furthermore, all actions will be on the WorldEdit `//undo`
+stack.
+
 ## Examples
 
 - `/hotswap ^green red`
