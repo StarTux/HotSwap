@@ -1,0 +1,29 @@
+main: com.cavetale.hotswap.HotSwapPlugin
+
+name: HotSwap
+version: 0.1
+description: Replace parts of block materials
+api-version: 1.13
+
+author: StarTux
+website: https://github.com/StarTux/HotSwap
+
+depend: [WorldEdit]
+softdepend: []
+
+commands:
+
+  hotswap:
+    aliases: []
+    description: HotSwap Command
+    permission: hotswap.hotswap
+    usage: |-
+      /hotswap <from> <to> - Replace beginning of material name
+      /hotswap ^<from> <to> - Replace beginning of material name
+      /hotswap <from>$ <to> - Replace end of material name
+
+permissions:
+
+  hotswap.hotswap:
+    description: Use /hotswap
+    default: op
