@@ -5,13 +5,14 @@ import com.cavetale.hotswap.util.WorldEdit;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
+import static net.kyori.adventure.text.Component.text;
+import static net.kyori.adventure.text.format.NamedTextColor.RED;
 
 @RequiredArgsConstructor
 public final class HotSwapCommand implements TabExecutor {
@@ -43,7 +44,7 @@ public final class HotSwapCommand implements TabExecutor {
         player.sendMessage("Replacing '" + from + "' at " + (begin ? "begnning" : "end") + " of material name with '" + to + "'");
         Cuboid cuboid = WorldEdit.getSelection(player);
         if (cuboid == null) {
-            player.sendMessage(ChatColor.RED + "No selection!");
+            player.sendMessage(text("No selection!", RED));
             return true;
         }
         int count = 0;
